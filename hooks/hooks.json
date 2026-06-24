@@ -3,6 +3,9 @@
     "beforeMCPExecution": [
       { "command": "./scripts/done-gate.sh" },
       { "command": "./scripts/playbooks-for-task.sh" }
+    ],
+    "beforeShellExecution": [
+      { "command": "./scripts/routing-enforce.sh" }
     ]
   }
 }
