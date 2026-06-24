@@ -1,0 +1,12 @@
+---
+description: CommitMind session priming — call prime_session at session start and after compaction to load the active task, recent activity, and project context.
+alwaysApply: true
+---
+
+# CommitMind: prime at session start
+
+At the start of a working session — and again after any context compaction — call the **`prime_session`** MCP tool BEFORE other work. It returns the active task, recent commits, recent observations + decisions, and build info: the project's "where we left off" context, deterministically.
+
+This is agent-initiated on purpose: Cursor's `sessionStart` hook cannot inject this automatically today (upstream `additional_context` delivery is broken), so the rule asks the agent to prime itself.
+
+If the user opens with a history-shaped question ("catch me up", "where did we leave off", "what's recent"), `prime_session` / `recent_activity` is the first call — see the memory-routing rule.

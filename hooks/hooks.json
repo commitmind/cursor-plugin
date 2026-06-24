@@ -1,0 +1,8 @@
+{
+  "hooks": {
+    "beforeMCPExecution": [
+      { "command": "./scripts/done-gate.sh" },
+      { "command": "./scripts/playbooks-for-task.sh" }
+    ]
+  }
+}
