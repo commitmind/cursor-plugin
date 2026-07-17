@@ -1,6 +1,6 @@
 {
   "name": "commitmind",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "CommitMind for Cursor — deterministic project memory, indexed code-intel (xref), and task/playbook workflows via MCP + rules. Requires the commitmind CLI installed and authenticated.",
   "author": {
     "name": "CommitMind",
